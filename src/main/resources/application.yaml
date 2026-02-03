@@ -22,6 +22,22 @@ parquet:
     input-dir: input
     processed-dir: processed
     failed-dir: failed
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus,gateway,refresh
+  tracing:
+    sampling:
+      probability: 1.0 # Trace 100% of requests in dev. Reduce in prod
+  otlp:
+    tracing:
+      enabled: false
+    otlp:
+    metrics:
+      export:
+        enabled: false
       
 logging:
   pattern:
