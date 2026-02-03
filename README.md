@@ -22,13 +22,13 @@ ENDPOINTS
 	    "data": [
 	        {
 	            "id": 1,
-	            "first_name": "Alice Smith",
+	            "first_name": "Alice",
 	            "age": 51,
 	            "country": "UK"
 	        },
 	        {
 	            "id": 2,
-	            "first_name": "Alice Johnson",
+	            "first_name": "Alice",
 	            "age": 57,
 	            "country": "UK"
 	        }
@@ -96,13 +96,13 @@ ENDPOINTS
 		    "data": [
 		        {
 		            "id": 1,
-		            "first_name": "Alice Smith",
+		            "first_name": "Alice",
 		            "age": 51,
 		            "country": "US"
 		        },
 		        {
 		            "id": 2,
-		            "first_name": "Alice Johnson",
+		            "first_name": "Alice",
 		            "age": 57,
 		            "country": "UK"
 		        }
