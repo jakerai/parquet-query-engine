@@ -1,0 +1,30 @@
+server:
+  port: 5000
+
+spring:
+  application:
+    name: parquet-query-engine
+  jackson:
+    default-property-inclusion: non_null
+  datasource:
+    driver-class-name: org.duckdb.DuckDBDriver
+    url: jdbc:duckdb:E:/duckdb/sample.db # path should exists
+
+parquet:
+  source: local # "local" or "s3"
+  local:
+    input-dir: E:/parquet-data/input
+    processed-dir: E:/parquet-data/processed
+    failed-dir: E:/parquet-data/failed
+  aws:
+    region: us-east-1
+    bucket: parquet-files
+    input-dir: input
+    processed-dir: processed
+    failed-dir: failed
+      
+logging:
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss.SSS} %-5level [%thread] [${spring.application.name:}, traceId=%X{traceId:-}, spanId=%X{spanId:-}] [%logger{0}.%M:%L] - %msg%n"
+  level:
+    root: INFO
